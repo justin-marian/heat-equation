@@ -5,14 +5,11 @@
 The Heat Equation Simulation is a `MATLAB` script that models the **1D heat equation for metal bars** made of `aluminum` (*Al*), `iron` (*Fe*), and `copper` (*Cu*). It discretizes space and time to ensure stability and assumes ***Neumann boundary conditions***. The simulation calculates the temperature distribution over time for the metal bars, visualizing the evolution of temperature profiles.
 
 <div style="display: flex;">
-    <iframe width="49%" height="auto" src="images/heat_equation_sym.mp4"></iframe>
-    <img src="images/final_result.png" alt="FINAL_RESULT" width="49%" />
+    <video controls width="49%" height="auto">
+        <source src="https://github.com/justin-marian/heat-equation/blob/main/images/simulation.mp4" type="video/mp4">
+    </video>
+    <img src="images/final_result.png" alt="FINAL_RESULT" width="49%" height="auto">
 </div>
-
-## Intended Use Cases
-
-- **Educational Use:** Enables students to understand heat equation principles via interactive simulation, enhancing learning in physics education.
-- **Engineering Application:** Assists engineers in analyzing heat distribution, aiding design optimization in thermal engineering projects.
 
 ## Physical Parameters
 
