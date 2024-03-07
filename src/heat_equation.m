@@ -29,18 +29,8 @@
 % IN THE SOFTWARE.
 %
 function heat_equation()
-    % Simulates the 1D heat equation for metal bars.
-    % Considered metals: Aluminum, Iron, and Copper.
-    %
-    % Output:
-    %  - The simulation discretizes space and time for stability.
-    %  - Neumann boundary conditions are assumed.
-    %  - Designed for educational purposes.
-    %
     clc;
     close all;
-
-    %% Physical parameters of the metal bars
 
     % Length in meters of the metal bars (Al, Fe, Cu)
     L1 = 0.04;
@@ -78,8 +68,6 @@ function heat_equation()
     % Discretization of the metal bars
     P = 111;
     
-    %%
-
     % Start from the left end of the second bar
     x = linspace(-L1 - L2_half, L_total - L3_half, P);
     dx = x(2) - x(1);
@@ -99,8 +87,6 @@ function heat_equation()
     T1 = 220; % Kelvin (Al)
     T2 = 77;  % Temperature (Fe)
     T3 = 340; % (Cu)
-
-    %%
 
     % Vector of initial temperatures
     T0 = zeros(1, P);
@@ -134,8 +120,6 @@ function heat_equation()
         T(i + 1, P) = T(i + 1, P - 1);
     end
 
-    %%
-
     % Dynamic simulation
     figure('Name', 'Heat Equation Simulation');
     simt = 0;
@@ -145,9 +129,9 @@ function heat_equation()
         index = min(abs(t - simt)) == abs(t - simt);
     
         % Clear previous plot and update the temperature distribution
-        hold off; %
+        hold off; % 
         plot(x(1:index_L1_end), T(index, 1:index_L1_end), 'r--o', 'DisplayName', 'Al');
-        hold on;
+        hold on; %
 
         plot(x(index_L1_end+1:index_L2_end), T(index, index_L1_end+1:index_L2_end), 'g--o', 'DisplayName', 'Fe');
         plot(x(index_L2_end+1:end), T(index, index_L2_end+1:end), 'b--o', 'DisplayName', 'Cu');
@@ -162,8 +146,6 @@ function heat_equation()
     
         % Update position and string value of the text
         text(x(45), 1.25 * T(index, 45), ['t = ', num2str(round(t(index) * 10)), ' ds'], 'Color', [0.9290 0.6940 0.1250], 'FontSize', 12);
-
-        % Add legend
         legend('Location', 'southeast');
     
         % Pause for a short time to allow visualization
