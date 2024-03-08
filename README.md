@@ -18,9 +18,9 @@ The Heat Equation is a `MATLAB` script that models the **1D heat equation for me
 
 ## Dynamic Process
 
-- **Temperature Calculation:** Calculates the temperature distribution over time using the heat equation and finite difference method.
-- **Boundary Conditions:** Applies Neumann boundary conditions to the simulation.
-- **Dynamic Visualization:** Dynamically visualizes the temperature distribution over time using a graphical simulation.
+- **Temperature Calculation:** Utilizes the heat equation and finite difference method to compute the temperature distribution over time.
+- **Boundary Conditions:** Imposes Neumann boundary conditions to regulate heat flux at the boundaries.
+- **Dynamic Visualization:** Provides real-time graphical visualization of the evolving temperature distribution.
 
 ## Numerical Solution
 
